@@ -28,10 +28,10 @@ class People {
         birthYear: json['birth_year'] as String?,
         gender: json['gender'] as String?,
         homeworld: json['homeworld'] as String?,
-        films: (json['films'] as List<String>?)?.cast<String>(),
-        species: (json['species'] as List<String>?)?.cast<String>(),
-        vehicles: (json['vehicles'] as List<String>?)?.cast<String>(),
-        starships: (json['starships'] as List<String>?)?.cast<String>(),
+        films: (json['films'] as List).cast<String>(),
+        species: (json['species'] as List).cast<String>(),
+        vehicles: (json['vehicles'] as List).cast<String>(),
+        starships: (json['starships'] as List).cast<String>(),
         created: json['created'] as String?,
         edited: json['edited'] as String?,
         url: json['url'] as String?,
@@ -46,10 +46,10 @@ class People {
   final String? birthYear;
   final String? gender;
   final String? homeworld;
-  final List<String>? films;
-  final List<String>? species;
-  final List<String>? vehicles;
-  final List<String>? starships;
+  final List<String> films;
+  final List<String> species;
+  final List<String> vehicles;
+  final List<String> starships;
   final String? created;
   final String? edited;
   final String? url;

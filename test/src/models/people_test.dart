@@ -15,19 +15,19 @@ void main() {
         String? birthYear = '19BBY',
         String? gender = 'male',
         String? homeworld = 'https://swapi.dev/api/planets/1/',
-        List<String>? films = const [
+        List<String> films = const [
           'https://swapi.dev/api/films/2/',
           'https://swapi.dev/api/films/6/',
           'https://swapi.dev/api/films/3/',
           'https://swapi.dev/api/films/1/',
           'https://swapi.dev/api/films/7/'
         ],
-        List<String>? species = const ['https://swapi.dev/api/species/1/'],
-        List<String>? vehicles = const [
+        List<String> species = const ['https://swapi.dev/api/species/1/'],
+        List<String> vehicles = const [
           'https://swapi.dev/api/vehicles/14/',
           'https://swapi.dev/api/vehicles/30/'
         ],
-        List<String>? starships = const [
+        List<String> starships = const [
           'https://swapi.dev/api/starships/12/',
           'https://swapi.dev/api/starships/22/'
         ],
