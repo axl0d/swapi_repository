@@ -53,4 +53,7 @@ class People {
   final String? created;
   final String? edited;
   final String? url;
+
+  @override
+  String toString() => 'People -> name: $name';
 }
