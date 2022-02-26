@@ -12,7 +12,7 @@ class PeopleSnapshot {
     return PeopleSnapshot(
       count: json['count'] as int,
       next: json['next'] as String?,
-      previous: json['next'] as String?,
+      previous: json['previus'] as String?,
       people: List<Map<String, dynamic>>.from(json['results'] as List)
           .map(People.fromJson)
           .toList(),
