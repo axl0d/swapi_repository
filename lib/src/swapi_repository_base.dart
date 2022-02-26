@@ -1,4 +1,5 @@
 import 'package:swapi_repository/src/dio_client.dart';
+import 'package:swapi_repository/src/models/film.dart';
 import 'package:swapi_repository/src/models/people_snapshot.dart';
 
 const peopleApi = 'people/';
@@ -23,5 +24,15 @@ class SwapiRepository {
 
     final snapshot = PeopleSnapshot.fromJson(data);
     return snapshot;
+  }
+
+  Future<List<Film>> fetchFilms(List<String> urls) async {
+    try {
+      final response = await _dioClient.multipleFetch(urls);
+      final films = response.map((r) => Film.fromJson(r.data!)).toList();
+      return films;
+    } catch (e) {
+      throw ResponseDataFailure();
+    }
   }
 }
